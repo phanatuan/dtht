@@ -10,12 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name:`slug`,
       value: slug,
     })
-
-    // const fileNode = getNode(node.parent)
-    // console.log('\n', fileNode.relativePath)
-    // console.log('***', createFilePath({node, getNode, basePath: `content`}))
   }
-  // console.log('******', node.internal.type);
 }
 
 exports.createPages = ({ graphql, actions }) => {
