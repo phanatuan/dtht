@@ -12,10 +12,33 @@ collections:
     folder: "content/blog"
     create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: blog/{{slug}}
     editor:
-     preview: false
+     preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'SEO Description', name: 'description', widget: 'text' }
+
+    
+  - name: "product"
+    label: "Product"
+    folder: "content/product"
+    create: false
+    slug: "{{slug}}"
+    preview_path: product/{{slug}}
+    editor:
+      preview: true
+    fields:
+      - { label: "Product Name", name: "product-name", widget: "string" }
+      - { label: "Price", name: "price", widget: "number", valueType: int, min: 0 }
+      - { label: "Short Description", name: "short-description", widget: "markdown" }
+      - { label: "Full Description", name: "body", widget: "markdown" }
+      - { label: "Product Image", name: "product-image", widget: "image" }
+
