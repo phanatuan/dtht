@@ -10,7 +10,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
      preview: false
