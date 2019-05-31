@@ -8,7 +8,7 @@ const renderBlogList = data => {
   const { allMarkdownRemark } = data
 
   return allMarkdownRemark.edges.map(({ node }) => (
-    <Link to={node.fields.slug}>
+    <Link key={node.id} to={node.fields.slug}>
       <h1>{node.frontmatter.title}</h1>
     </Link>
   ))
